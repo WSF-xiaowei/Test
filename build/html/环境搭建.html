@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html  lang="zh_CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+      <title>环境搭建</title>
+    
+      <link rel="stylesheet" href="_static/pygments.css">
+      <link rel="stylesheet" href="_static/theme.css">
+      <link rel="stylesheet" href="_static/sphinx_press_theme.css">
+      
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+
+      <!-- sphinx script_files -->
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/translations.js"></script>
+
+      
+      <script src="_static/theme-vendors.js"></script>
+      <script src="_static/theme.js" defer></script>
+    
+      <link rel="shortcut icon" href="_static/logo.png"/>
+  <link rel="index" title="索引" href="genindex.html" />
+  <link rel="search" title="搜索" href="search.html" />
+  <link rel="prev" title="最终效果" href="%E7%AC%AC%E4%B8%80.html" /> 
+  </head>
+
+  <body>
+    <div id="app" class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
+  <router-link to="index.html" class="home-link">
+    
+      <span class="site-name">在线使用说明</span>
+    
+  </router-link>
+
+  <div class="links">
+    <navlinks class="can-hide">
+
+
+
+    </navlinks>
+  </div>
+</navbar>
+
+      
+      <div class="sidebar-mask" @click="toggleSidebar(false)">
+      </div>
+        <sidebar @toggle-sidebar="toggleSidebar">
+          
+          <navlinks>
+            
+
+
+
+            
+          </navlinks><div id="searchbox" class="searchbox" role="search">
+  <div class="caption"><span class="caption-text">快速搜索</span>
+    <div class="searchformwrapper">
+      <form class="search" action="search.html" method="get">
+        <input type="text" name="q" />
+        <input type="submit" value="搜索" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div><div class="sidebar-links" role="navigation" aria-label="main navigation">
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="index.html#id1">目录</a></span>
+      </p>
+      <ul class="current">
+        
+          <li class="toctree-l1 "><a href="%E7%AC%AC%E4%B8%80.html" class="reference internal ">最终效果</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 current"><a href="#" class="reference internal current">环境搭建</a>
+
+            
+              <ul>
+                
+                  <li class="toctree-l2"><a href="#id2" class="reference internal">文档结构</a></li>
+                
+                  <li class="toctree-l2"><a href="#id3" class="reference internal">构建文档目录</a></li>
+                
+                  <li class="toctree-l2"><a href="#id4" class="reference internal">显示效果</a></li>
+                
+              </ul>
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+</div>
+        </sidebar>
+
+      <page>
+          <div class="body-header" role="navigation" aria-label="navigation">
+  
+  <ul class="breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+    
+    <li>环境搭建</li>
+  </ul>
+  
+
+  <ul class="page-nav">
+  <li class="prev">
+    <a href="%E7%AC%AC%E4%B8%80.html"
+       title="上一章">← 最终效果</a>
+  </li>
+</ul>
+  
+</div>
+<hr>
+          <div class="content" role="main">
+            
+  <div class="section" id="id1">
+<h1>环境搭建<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<ul class="simple">
+<li><p>新建文件夹 <strong>sphinx_learn</strong> ,在终端下执行 <cite>sphinx-quickstart</cite> ,具体的选项如下</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">PS E:\sphinx_learn&gt; sphinx-quickstart</span>
+<span class="go">Welcome to the Sphinx 1.8.5 quickstart utility.</span>
+<span class="go">accept a default value, if one is given in brackets).</span>
+
+<span class="go">Selected root path: .</span>
+
+<span class="go">You have two options for placing the build directory for Sphinx output.</span>
+<span class="go">&quot;source&quot; and &quot;build&quot; directories within the root path.</span>
+<span class="gp">&gt;</span> Project release <span class="o">[]</span>: v1.0
+
+<span class="go">If the documents are to be written in a language other than English,</span>
+<span class="go">you can select a language here by its language code. Sphinx will then</span>
+<span class="go">For a list of supported codes, see</span>
+<span class="gp">http://sphinx-doc.org/config.html#</span>confval-language.
+<span class="gp">&gt;</span> Project language <span class="o">[</span>en<span class="o">]</span>: zh_CN
+
+<span class="go">The file name suffix for source files. Commonly, this is either &quot;.txt&quot;</span>
+<span class="go">or &quot;.rst&quot;.  Only files with this suffix are considered documents.</span>
+<span class="gp">&gt;</span> Source file suffix <span class="o">[</span>.rst<span class="o">]</span>:
+
+<span class="go">One document is special in that it is considered the top node of the</span>
+<span class="go">&quot;contents tree&quot;, that is, it is the root of the hierarchical structure</span>
+<span class="go">of the documents. Normally, this is &quot;index&quot;, but if your &quot;index&quot;</span>
+<span class="go">document is a custom template, you can also set this to another filename.</span>
+<span class="gp">&gt;</span> Name of your master document <span class="o">(</span>without suffix<span class="o">)</span> <span class="o">[</span>index<span class="o">]</span>:
+<span class="go">PS E:\sphinx_learn&gt; sphinx-quickstart</span>
+<span class="go">Welcome to the Sphinx 1.8.5 quickstart utility.</span>
+
+<span class="go">accept a default value, if one is given in brackets).</span>
+
+
+<span class="go">The project name will occur in several places in the built documentation.</span>
+<span class="gp">&gt;</span> Project name: demo
+<span class="gp">&gt;</span> Author name<span class="o">(</span>s<span class="o">)</span>: JefferHuang
+<span class="gp">&gt;</span> Project release <span class="o">[]</span>: v1.0
+<span class="go">you can select a language here by its language code. Sphinx will then</span>
+<span class="go">translate text that it generates into that language.</span>
+
+<span class="go">For a list of supported codes, see</span>
+<span class="gp">http://sphinx-doc.org/config.html#</span>confval-language.
+<span class="gp">&gt;</span> Project language <span class="o">[</span>en<span class="o">]</span>: zh_CN
+
+<span class="go">The file name suffix for source files. Commonly, this is either &quot;.txt&quot;</span>
+<span class="go">or &quot;.rst&quot;.  Only files with this suffix are considered documents.</span>
+<span class="gp">&gt;</span> Source file suffix <span class="o">[</span>.rst<span class="o">]</span>:
+
+<span class="go">One document is special in that it is considered the top node of the</span>
+<span class="go">&quot;contents tree&quot;, that is, it is the root of the hierarchical structure</span>
+<span class="go">of the documents. Normally, this is &quot;index&quot;, but if your &quot;index&quot;</span>
+<span class="go">of the documents. Normally, this is &quot;index&quot;, but if your &quot;index&quot;</span>
+<span class="go">document is a custom template, you can also set this to another filename.</span>
+<span class="gp">&gt;</span> Name of your master document <span class="o">(</span>without suffix<span class="o">)</span> <span class="o">[</span>index<span class="o">]</span>:
+<span class="go">Indicate which of the following Sphinx extensions should be enabled:</span>
+<span class="gp">&gt;</span> autodoc: automatically insert docstrings from modules <span class="o">(</span>y/n<span class="o">)</span> <span class="o">[</span>n<span class="o">]</span>:
+<span class="gp">&gt;</span> doctest: automatically <span class="nb">test</span> code snippets in doctest blocks <span class="o">(</span>y/n<span class="o">)</span> <span class="o">[</span>n<span class="o">]</span>:
+<span class="gp">&gt;</span> intersphinx: link between Sphinx documentation of different projects <span class="o">(</span>y/n<span class="o">)</span> <span class="o">[</span>n<span class="o">]</span>:
+<span class="gp">&gt;</span> todo: write <span class="s2">&quot;todo&quot;</span> entries that can be shown or hidden on build <span class="o">(</span>y/n<span class="o">)</span> <span class="o">[</span>n<span class="o">]</span>:
+<span class="gp">&gt;</span> coverage: checks <span class="k">for</span> documentation coverage <span class="o">(</span>y/n<span class="o">)</span> <span class="o">[</span>n<span class="o">]</span>:
+<span class="gp">&gt;</span> imgmath: include math, rendered as PNG or SVG images <span class="o">(</span>y/n<span class="o">)</span> <span class="o">[</span>n<span class="o">]</span>:
+<span class="gp">&gt;</span> mathjax: include math, rendered in the browser by MathJax <span class="o">(</span>y/n<span class="o">)</span> <span class="o">[</span>n<span class="o">]</span>:
+<span class="gp">&gt;</span> ifconfig: conditional inclusion of content based on config values <span class="o">(</span>y/n<span class="o">)</span> <span class="o">[</span>n<span class="o">]</span>:
+<span class="gp">&gt;</span> viewcode: include links to the <span class="nb">source</span> code of documented Python objects <span class="o">(</span>y/n<span class="o">)</span> <span class="o">[</span>n<span class="o">]</span>:
+<span class="gp">&gt;</span> githubpages: create .nojekyll file to publish the document on GitHub pages <span class="o">(</span>y/n<span class="o">)</span> <span class="o">[</span>n<span class="o">]</span>:
+
+<span class="go">A Makefile and a Windows command file can be generated for you so that you</span>
+<span class="go">only have to run e.g. `make html&#39; instead of invoking sphinx-build</span>
+<span class="go">directly.</span>
+<span class="gp">&gt;</span> Create Makefile? <span class="o">(</span>y/n<span class="o">)</span> <span class="o">[</span>y<span class="o">]</span>: y
+<span class="gp">&gt;</span> Create Windows <span class="nb">command</span> file? <span class="o">(</span>y/n<span class="o">)</span> <span class="o">[</span>y<span class="o">]</span>: y
+
+<span class="go">Creating file .\source\conf.py.</span>
+<span class="go">Creating file .\source\index.rst.</span>
+<span class="go">Creating file .\Makefile.</span>
+<span class="go">Creating file .\make.bat.</span>
+
+<span class="go">Finished: An initial directory structure has been created.</span>
+
+<span class="go">You should now populate your master file .\source\index.rst and create other documentation</span>
+<span class="go">source files. Use the Makefile to build the docs, like so:</span>
+<span class="go">make builder</span>
+<span class="go">where &quot;builder&quot; is one of the supported builders, e.g. html, latex or linkcheck.</span>
+</pre></div>
+</div>
+<div class="section" id="id2">
+<h2>文档结构<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>上述命令执行成功后,生成如下文档结构:
+- config.py是配置文件,可自行设置
+- index.rst是首页
+- 其他模板和静态目录不用动,只需修改config.py和index.rst，再添加其他文件即可</p>
+<img alt="_images/structure_01.png" src="_images/structure_01.png" />
+</div>
+<div class="section" id="id3">
+<h2>构建文档目录<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p>在https://sphinx-themes.org/这个目录下,选择自己想要的主题，点击PyPi进入后复制命令安装，参照config或者sample修改当前目录下的 config.py</p></li>
+</ul>
+<img alt="_images/theme.png" src="_images/theme.png" />
+<ul class="simple">
+<li><p>修改config.py文件,配置主题。</p></li>
+</ul>
+<img alt="_images/theme2.png" src="_images/theme2.png" />
+<ul class="simple">
+<li><p>根据自己的需求，设计文档目录结构。</p></li>
+</ul>
+<img alt="_images/index_toc.png" src="_images/index_toc.png" />
+</div>
+<div class="section" id="id4">
+<h2>显示效果<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<p>执行如下命令,生成html文件。</p>
+<ul class="simple">
+<li><p>make clean</p></li>
+<li><p>make html</p></li>
+</ul>
+<img alt="_images/content_toc.png" src="_images/content_toc.png" />
+</div>
+</div>
+
+
+          </div>
+          <div class="page-nav">
+            <div class="inner"><ul class="page-nav">
+  <li class="prev">
+    <a href="%E7%AC%AC%E4%B8%80.html"
+       title="上一章">← 最终效果</a>
+  </li>
+</ul><div class="footer" role="contentinfo">
+      &#169; 版权所有 xiaowei.
+    <br>
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.2.1 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a>.
+</div>
+            </div>
+          </div>
+      </page>
+    </div>
+    
+    
+  </body>
+</html>

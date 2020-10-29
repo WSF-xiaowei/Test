@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html  lang="zh_CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+      <title>reStructuredText入门</title>
+    
+      <link rel="stylesheet" href="_static/pygments.css">
+      <link rel="stylesheet" href="_static/theme.css">
+      <link rel="stylesheet" href="_static/sphinx_press_theme.css">
+      
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+
+      <!-- sphinx script_files -->
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/translations.js"></script>
+
+      
+      <script src="_static/theme-vendors.js"></script>
+      <script src="_static/theme.js" defer></script>
+    
+      <link rel="shortcut icon" href="_static/logo.png"/>
+  <link rel="index" title="索引" href="genindex.html" />
+  <link rel="search" title="搜索" href="search.html" /> 
+  </head>
+
+  <body>
+    <div id="app" class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
+  <router-link to="index.html" class="home-link">
+    
+      <span class="site-name">在线使用说明</span>
+    
+  </router-link>
+
+  <div class="links">
+    <navlinks class="can-hide">
+
+
+
+    </navlinks>
+  </div>
+</navbar>
+
+      
+      <div class="sidebar-mask" @click="toggleSidebar(false)">
+      </div>
+        <sidebar @toggle-sidebar="toggleSidebar">
+          
+          <navlinks>
+            
+
+
+
+            
+          </navlinks><div id="searchbox" class="searchbox" role="search">
+  <div class="caption"><span class="caption-text">快速搜索</span>
+    <div class="searchformwrapper">
+      <form class="search" action="search.html" method="get">
+        <input type="text" name="q" />
+        <input type="submit" value="搜索" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div><div class="sidebar-links" role="navigation" aria-label="main navigation">
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="index.html#id1">目录</a></span>
+      </p>
+      <ul class="">
+        
+          <li class="toctree-l1 "><a href="%E7%AC%AC%E4%B8%80.html" class="reference internal ">最终效果</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA.html" class="reference internal ">环境搭建</a>
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+</div>
+        </sidebar>
+
+      <page>
+          <div class="body-header" role="navigation" aria-label="navigation">
+  
+  <ul class="breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+    
+    <li>reStructuredText入门</li>
+  </ul>
+  
+
+  <ul class="page-nav">
+</ul>
+  
+</div>
+<hr>
+          <div class="content" role="main">
+            
+  <div class="section" id="module-reStructuredText">
+<span id="module-reStructuredText入门"></span><span id="restructuredtext"></span><h1>reStructuredText入门<a class="headerlink" href="#module-reStructuredText" title="永久链接至标题">¶</a></h1>
+<p>本节简要介绍了reStructuredText (reST)的概念和语法，旨在提供足够的信息来高效地编写文档。因为reST是一个简单的，不显眼的标记语言，这不会花费太长时间来入门。</p>
+<div class="section" id="my-reference">
+<span id="id1"></span><h2>行内标记<a class="headerlink" href="#my-reference" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p>单星号： <code class="docutils literal notranslate"><span class="pre">*text*</span></code> 强调 (斜体),</p></li>
+<li><p>双星号： <code class="docutils literal notranslate"><span class="pre">**text**</span></code> 重点强调 (粗体)</p></li>
+<li><p>反引号： <code class="docutils literal notranslate"><span class="pre">``text``</span></code> 代码示例。</p></li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h2>列表标记<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">1. one</span>
+<span class="go">2. two</span>
+
+<span class="gp">#</span>. one
+<span class="gp">#</span>. two
+
+<span class="go">- one</span>
+<span class="go">- two</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>代码块标记<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>段尾加入特殊标记 :: 引入</p>
+<div class="admonition caution">
+<p class="admonition-title">警告</p>
+<p>注意空行</p>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">代码块...</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>表格标记<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 29%" />
+<col style="width: 29%" />
+<col style="width: 41%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>A</p></th>
+<th class="head"><p>B</p></th>
+<th class="head"><p>A and B</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>False</p></td>
+<td><p>False</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-odd"><td><p>True</p></td>
+<td><p>False</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-even"><td><p>False</p></td>
+<td><p>True</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-odd"><td><p>True</p></td>
+<td><p>True</p></td>
+<td><p>True</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id5">
+<h2>超链接标记<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<p>外部链接::
+<a class="reference external" href="https://github.com/SeayXu/">https://github.com/SeayXu/</a></p>
+<blockquote>
+<div><p><a href="#id8"><span class="problematic" id="id9">`a link`_</span></a>
+.. _a link: <a class="reference external" href="http://www.baidu.com/">http://www.baidu.com/</a></p>
+<p><a href="#id10"><span class="problematic" id="id11">`a link&lt;http://www.baidu.com/&gt;`_</span></a></p>
+</div></blockquote>
+<p><a href="#id12"><span class="problematic" id="id13">`a link`_</span></a>
+.._a link: <a class="reference external" href="http://www.baidu.com/">http://www.baidu.com/</a></p>
+<p>内部链接:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">.. _my-reference:</span>
+
+<span class="go">行内标记</span>
+<span class="go">my-reference_</span>
+</pre></div>
+</div>
+<p>行内标记 <a class="reference internal" href="#my-reference">my-reference</a></p>
+</div>
+<div class="section" id="id6">
+<h2>章节标记<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">========</span>
+<span class="go">大标题</span>
+<span class="go">========</span>
+
+<span class="go">小标题</span>
+<span class="go">--------</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id7">
+<h2>图片<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h2>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">..  imagea:a.png</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <div class="page-nav">
+            <div class="inner"><ul class="page-nav">
+</ul><div class="footer" role="contentinfo">
+      &#169; 版权所有 xiaowei.
+    <br>
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.2.1 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a>.
+</div>
+            </div>
+          </div>
+      </page>
+    </div>
+    
+    
+  </body>
+</html>
